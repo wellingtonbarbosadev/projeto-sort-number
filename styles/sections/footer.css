@@ -1,0 +1,14 @@
+footer {
+  grid-area: C;
+
+  .question {
+    span {
+      font: var(--font-paragraph-medium);
+      color: var(--content-brand);
+    }
+    p {
+      font: var(--font-paragraph-small);
+      color: var(--content-secondary);
+    }
+  }
+}
