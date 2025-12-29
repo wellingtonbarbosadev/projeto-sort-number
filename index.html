@@ -23,7 +23,7 @@
     </section>
 
     <aside>
-      <div>
+      <div class="form">
         <div class="title-form">
           <h2>Quero sortear:</h2>
           <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
@@ -33,19 +33,19 @@
             <label>
               <fieldset>Números</fieldset>
               <div class="input-wrapper">
-                <input type="text" name="numbers" id="numbers">
+                <input type="text" name="numbers" id="numbers" required>
               </div>
             </label>
             <label>
               <fieldset>De</fieldset>
               <div class="input-wrapper">
-                <input type="text" name="fromNumber" id="fromNumber">
+                <input type="text" name="fromNumber" id="fromNumber" required>
               </div>
             </label>
             <label>
               <fieldset>Até</fieldset>
               <div class="input-wrapper">
-                <input type="text" name="toNumber" id="toNumber">
+                <input type="text" name="toNumber" id="toNumber" required>
               </div>
             </label>
           </div>
@@ -60,9 +60,9 @@
       <div class="result hidden">
         <span>Resultado do sorteio</span>
         <div class="result-numbers">
-          <span>1</span>
+          <!-- <span>1</span> -->
         </div>
-        <button type="button">Sortear Novamente</button>
+        <button type="button" class="newSort">Sortear Novamente</button>
       </div>
     </aside>
     
@@ -85,6 +85,6 @@
         </div>
   </footer>
   </main>
-  
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

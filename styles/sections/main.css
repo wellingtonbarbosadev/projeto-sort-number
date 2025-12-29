@@ -209,6 +209,7 @@ main {
 
     .result {
       height: 100%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -223,7 +224,8 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 4px;
+        margin-top: 2rem;
+        gap: 32px;
 
         span {
           position: relative;
@@ -317,6 +319,9 @@ main {
       'A'
       'B'
       'C';
+    aside {
+      max-width: 100%;
+    }
 
     .info .header h1 {
       font: var(--font-display-medium);
