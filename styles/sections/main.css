@@ -35,6 +35,7 @@ main {
     grid-area: B;
     max-width: 30rem;
     flex-direction: column;
+    margin-left: auto;
 
     .title-form {
       display: flex;
