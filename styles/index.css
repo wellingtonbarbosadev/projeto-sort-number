@@ -1,2 +1,8 @@
 @import url('global.css');
 @import url('utility.css');
+@import url('header.css');
+
+header {
+  padding-block: 4.75rem;
+}
+
