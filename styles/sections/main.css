@@ -1,9 +1,11 @@
 main {
   display: grid;
+  column-gap: 2rem;
   grid-template-areas: 
     'A B'
     'C B';
   }
+  
   .info {
     grid-area: A;
   }
@@ -26,6 +28,7 @@ main {
     h1 {
       font: var(--font-display-large);
       color: var(--content-primary);
+      max-width: 590px;
     }
   }
 
