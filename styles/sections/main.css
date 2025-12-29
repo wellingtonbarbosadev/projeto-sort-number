@@ -4,7 +4,6 @@ main {
   grid-template-areas: 
     'A B'
     'C B';
-  }
   
   .info {
     grid-area: A;
@@ -88,15 +87,15 @@ main {
           &:hover, &:focus-within {
             &::before {
               opacity: 1;
-
             }
             
           }
           &:hover {
             cursor: pointer;
           }
-          &:focus-within {
-            padding: 2px;
+          &:focus-within::before {
+            /* padding: 2px; */
+            scale: 1.03;
           }
         }
         input {
@@ -167,7 +166,6 @@ main {
         &::after {
           content: "";
           display: inline-block;
-          
           position: absolute;
           margin-left: .5rem;
           top: 50%;
@@ -179,6 +177,49 @@ main {
           background-position: center;
           background-repeat: no-repeat;
         }
+
+        &:hover::before {
+          background-image: var(--gradient-border);
+          animation: gradient 5s ease;
+          opacity: 1;
+         
+        }
+        &::before {
+          content: "";
+          transition: all .5s;
+          position: absolute; width: 100%;
+          height: 100%;
+          border: 2px solid transparent;
+          border-radius: inherit;
+          top: 0;
+          left: 0;
+          background-clip: border-box;
+          z-index: -1;
+          inset: -2px;
+          background-size: 200% 200%;
+          opacity: 0;
+          
+
+        }
+
+        
       }
     }
   }
+  @media (max-width: 950px) {
+    grid-template-areas: 
+      'A'
+      'B'
+      'C';
+
+    .info .header h1 {
+      font: var(--font-display-medium);
+      margin-bottom: 1%;
+    }
+  }
+}
+@keyframes gradient {
+          0% { background-position: 0% 50%;}
+          50% { background-position: 300% 100%;}
+          100% { background-position: 0% 50%;
+        }}
