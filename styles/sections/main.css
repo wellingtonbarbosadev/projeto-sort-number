@@ -31,6 +31,7 @@ main {
 
   aside {
     grid-area: B;
+    max-width: 30rem;
     flex-direction: column;
 
     .title-form {

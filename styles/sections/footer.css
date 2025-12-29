@@ -1,6 +1,8 @@
 footer {
   grid-area: C;
+  width: 100%;
   margin-top: 2.375rem;
+  
   .question + .question {
       margin-top: 2.25rem;
     }
