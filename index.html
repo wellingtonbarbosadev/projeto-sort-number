@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
   <title>Numbers</title>
 </head>
+
 <body>
   <header class="container">
     <img src="assets/img/logo.svg" alt="Logo">
@@ -17,7 +18,7 @@
     <section class="info">
       <div class="header">
         <span>Online - Gratuito</span>
-        <h1>Sorteador de números</h1>
+        <h1>Sorteador <br>de números</h1>
       </div>
     </section>
 
@@ -31,15 +32,21 @@
         <div id="fields">
           <label>
             <fieldset>Números</fieldset>
-            <input type="number" name="numbers" id="numbers">
+            <div class="input-wrapper">
+              <input type="text" name="numbers" id="numbers">
+            </div>
           </label>
           <label>
             <fieldset>De</fieldset>
-            <input type="number" name="fromNumber" id="fromNumber">
+            <div class="input-wrapper">
+              <input type="text" name="fromNumber" id="fromNumber">
+            </div>
           </label>
           <label>
             <fieldset>Até</fieldset>
-            <input type="number" name="toNumber" id="toNumber">
+            <div class="input-wrapper">
+              <input type="text" name="toNumber" id="toNumber">
+            </div>
           </label>
         </div>
 
@@ -52,18 +59,20 @@
 
       </form>
     </aside>
-  </main>
-  <footer class="container">
-    <div class="questions">
-        <div class="question">
-          <span>Como funciona o sorteador de números?</span>
-          <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+    
+    <footer class="container">
+      <div class="questions">
+          <div class="question">
+            <span>Como funciona o sorteador de números?</span>
+            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+          </div>
+          <div class="question">
+            <span>Posso escolher o intervalo dos números?</span>
+            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+          </div>
         </div>
-        <div class="question">
-          <span>Posso escolher o intervalo dos números?</span>
-          <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
-        </div>
-      </div>
   </footer>
+  </main>
+  
 </body>
 </html>
