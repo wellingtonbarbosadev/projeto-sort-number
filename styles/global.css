@@ -6,8 +6,20 @@
 
 body {
   background-color: #000;
+  background-image: url(../assets/img/Linha.svg);
+  height: 100vh;
+
   color: #FFFFFF;
   font-family: 'Roboto Flex', sans-serif;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #000 50%, transparent);
+    z-index: -1;
+  }
 }
 
 :root {
