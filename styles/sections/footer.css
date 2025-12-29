@@ -1,14 +1,30 @@
 footer {
   grid-area: C;
-
+  margin-top: 2.375rem;
+  .question + .question {
+      margin-top: 2.25rem;
+    }
   .question {
+    display: flex;
+
+    
+    .icon {
+      width: 20px;
+      mask: url("../../assets/icons/Frame-2.svg");
+      background-color: var(--content-brand);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      margin-right: .5rem;
+    }
     span {
       font: var(--font-paragraph-medium);
       color: var(--content-brand);
+      
     }
     p {
       font: var(--font-paragraph-small);
       color: var(--content-secondary);
+      max-width: 350px;
     }
   }
 }
