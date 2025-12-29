@@ -1,0 +1,180 @@
+main {
+  display: grid;
+  grid-template-areas: 
+    'A B'
+    'C B';
+  }
+  .info {
+    grid-area: A;
+  }
+  .info .header {
+    
+
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    text-transform: uppercase;
+
+    span {
+      font: var(--font-overline);
+      background-image: var(--gradient-content);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    h1 {
+      font: var(--font-display-large);
+      color: var(--content-primary);
+    }
+  }
+
+  aside {
+    grid-area: B;
+    flex-direction: column;
+
+    .title-form {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 2.5rem;
+
+      h2 {
+        font: var(--font-label-medium);
+        color: var(--content-primary);
+        text-transform: uppercase;
+      }
+
+      p {
+        font: var(--font-paragraph-large);
+        color: var(--content-secondary);
+      }
+    }
+
+    form {
+      #fields {
+        display: flex;
+        gap: .75rem;
+        fieldset {
+          border: none;
+          font: var(--font-label-small);
+          text-transform: uppercase;
+          text-align: center;
+          color: var(--content-secondary);
+        }
+
+        .input-wrapper {
+          padding: 1px;
+          border-radius: .5rem;
+          margin-top: .5rem;
+          transition: all .5s;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all .3s;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: .5rem;
+            background-image: var(--gradient-border);
+          }
+          &:hover, &:focus-within {
+            &::before {
+              opacity: 1;
+
+            }
+            
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          &:focus-within {
+            padding: 2px;
+          }
+        }
+        input {
+          all: unset;
+          width: 5.375rem;
+          height: 3.5rem;
+          border-radius: .5rem;
+          padding: .25rem .5rem;
+          text-align: center;
+          background-color: var(--background-secondary);
+          font: var(--font-display-small);
+          position: relative;
+        }
+      }
+
+      & > label {
+        input[type="checkbox"] {
+          all: unset;
+          margin-top: 1.25rem;
+          width: 30px;
+          height: 20px;
+          border-radius: 1rem;
+          background-color: var(--content-tertiary);
+          position: relative;
+          vertical-align: bottom;
+
+          &::before {
+            content: "";
+            transition: all .3s;
+            position: absolute;
+            top: 3px;    /* ajuste conforme necessário */
+            left: 3px;   /* ajuste conforme necessário */
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            background-color: #FFF;
+            z-index: 1;
+          }
+
+          &:checked {
+            background-image: var(--gradient-background);
+            &::before {
+              transform: translateX(calc(100% - 3px));
+            }
+          }
+        }
+
+        span {
+          vertical-align: bottom;
+          color: var(--content-primary);
+          font: var(--font-paragraph-small);
+        }
+      }
+
+      button[type="submit"] {
+        display: flex;
+        all: unset;
+        width: 100%;
+        height: 3.5rem;
+        background-color: var(--background-tertiary);
+        border-radius: .5rem;
+        font: var(--font-label-medium);
+        text-transform: uppercase;
+        margin-top: 2.5rem;
+        position: relative;
+        text-align: center;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          
+          position: absolute;
+          margin-left: .5rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 24px;
+          background-image: url(../../assets/icons/Frame-1.svg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
