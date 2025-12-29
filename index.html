@@ -23,41 +23,46 @@
     </section>
 
     <aside>
-      <div class="title-form">
-        <h2>Quero sortear:</h2>
-        <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
-      </div>
-
-      <form action="">
-        <div id="fields">
-          <label>
-            <fieldset>Números</fieldset>
-            <div class="input-wrapper">
-              <input type="text" name="numbers" id="numbers">
-            </div>
-          </label>
-          <label>
-            <fieldset>De</fieldset>
-            <div class="input-wrapper">
-              <input type="text" name="fromNumber" id="fromNumber">
-            </div>
-          </label>
-          <label>
-            <fieldset>Até</fieldset>
-            <div class="input-wrapper">
-              <input type="text" name="toNumber" id="toNumber">
-            </div>
-          </label>
+      <div>
+        <div class="title-form">
+          <h2>Quero sortear:</h2>
+          <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
         </div>
-
-        <label>
-          <input type="checkbox" name="repeatNumber" id="repeatNumber">
-          <span>Não repetir número</span>
-        </label>
-
-        <button type="submit">Sortear</button>
-
-      </form>
+        <form action="">
+          <div id="fields">
+            <label>
+              <fieldset>Números</fieldset>
+              <div class="input-wrapper">
+                <input type="text" name="numbers" id="numbers">
+              </div>
+            </label>
+            <label>
+              <fieldset>De</fieldset>
+              <div class="input-wrapper">
+                <input type="text" name="fromNumber" id="fromNumber">
+              </div>
+            </label>
+            <label>
+              <fieldset>Até</fieldset>
+              <div class="input-wrapper">
+                <input type="text" name="toNumber" id="toNumber">
+              </div>
+            </label>
+          </div>
+          <label>
+            <input type="checkbox" name="repeatNumber" id="repeatNumber">
+            <span>Não repetir número</span>
+          </label>
+          <button type="submit">Sortear</button>
+        </form>
+      </div>
+      <div class="result">
+        <span>Resultado do sorteio</span>
+        <div class="result-numbers">
+          <span>1</span>
+        </div>
+        <button type="button">Sortear Novamente</button>
+      </div>
     </aside>
     
     <footer>
