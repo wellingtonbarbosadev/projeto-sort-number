@@ -28,11 +28,14 @@ function sortNumbers() {
       }
     }
     
-    number.push(numberRandom)
-    const number_element = document.createElement("span")
-    number_element.textContent = numberRandom
-  
-    resultNumbers.appendChild(number_element)
+    setTimeout(() => {
+      number.push(numberRandom)
+      const number_element = document.createElement("span")
+      number_element.textContent = numberRandom
+    
+      resultNumbers.appendChild(number_element)
+    }, 1000 * (i + 1));
+    
   }
   console.log(number)
 }
